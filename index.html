@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>接收</title>
+</head>
+<body bgcolor="#99FFFF">
+  <h3>接收数据</h3>
+  <script>
+    //重点：
+    //GET数据=存在url
+    //POST数据=不在url，纯html JS拿不到
+    let url = new URL(location.href);
+    console.log(url.search)
+    document.write("POST提交：网址后面【没有任何数据")
+  </script>
+  <p align="center">
+    第一段居中
+  </p>
+<pre>拆
+         开</pre>
+  <p align="right">
+    靠右
+  </p>
+<a href="#C4">查看本页面某一处内容</a>
+  <a target="_blank" href="www.baidu.com">百度链接</a>
+  <hr>
+  <div style="background:#eee ">
+    块
+  </div>
+<big>放大</big><small>缩小</small><sub>下标</sub><sup>上标</sup>
+  <p>
+    第<span style="color:blue">嵌入</span>二<strong>粗</strong>段<i>斜</i>换</br>行
+  </p><code>html #including</code>
+<samp>程序输出字体</samp><kbd>ctrl+c</kbd>
+  <table border="2">
+    <tr><td bgcolor="red">a</td><td>b</tr></tr>
+    <tr bgcolor="red"><td>r</td><td>t</td></tr>
+  </table>
+  <ol>
+    <li>w</li><li>e</li>
+  </ol>
+  <ul>
+    <li>i</li><li>p</li>
+  </ul>
+  <h1>标题1</h1>
+  <h2>标题2</h2>
+  <img height="100px" src="2020.jpg" alt="图片">
+  <form><a id="C4"></a>
+    <input type="text" name="username" />
+</br>
+  <input type="password" name="password" /></br>
+<input type="radio" name="gender" value="male" />男
+<input type="radio" name="gender" value="female" />女</br>
+<input type="checkbox" name="gender" value="1" />可男
+<input type="checkbox" name="gender" value="2" />可女</br>
+</form>
+
+</body>
+</html>
