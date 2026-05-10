@@ -6,13 +6,17 @@
 <body bgcolor="#99FFFF">
   <h3>接收数据</h3>
   <script>
-    //重点：
-    //GET数据=存在url
-    //POST数据=不在url，纯html JS拿不到
-    let url = new URL(location.href);
-    console.log(url.search)
-    document.write("POST提交：网址后面【没有任何数据")
-  </script>
+        // 获取网址后面的参数
+        let url = new URL(location.href);
+        let name = url.searchParams.get("username");
+        let age = url.searchParams.get("age");
+
+        // 显示到页面
+        document.getElementById("info").innerHTML = `
+            姓名：${name}<br>
+            年龄：${age}
+        `;
+</script>
   <p align="center">
     第一段居中
   </p>
