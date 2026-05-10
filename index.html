@@ -4,6 +4,30 @@
   <title>接收</title>
 </head>
 <body bgcolor="#99FFFF">
+    <h3>已获取表单提交的数据</h3>
+    <div id="showData"></div>
+
+    <script>
+        // 1. 获取地址栏参数
+        const urlParams = new URLSearchParams(location.search);
+
+        // 2. 逐个取出表单数据
+        const username = urlParams.get('username');
+        const age = urlParams.get('age');
+        const phone = urlParams.get('phone');
+        const gender = urlParams.get('gender');
+        const msg = urlParams.get('msg');
+
+        // 3. 把数据展示到页面
+        let html = `
+            <p>姓名：${username}</p>
+            <p>年龄：${age}</p>
+            <p>手机号：${phone || '未填写'}</p>
+            <p>性别：${gender || '未选择'}</p>
+            <p>留言：${msg || '无留言'}</p>
+        `;
+        document.getElementById('showData').innerHTML = html;
+    </script>
   <h3>接收数据</h3>
   <script>
         // 获取网址后面的参数
